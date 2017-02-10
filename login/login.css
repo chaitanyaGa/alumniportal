@@ -1,0 +1,347 @@
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    padding-top: 5%; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal1 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    padding-top:20%; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+/* Modal Content */
+.modal-content {
+    position: relative;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width:70%;
+	
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+.modal-content1 {
+    position: relative;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width:20%;
+    height:40%;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: red;
+    float: right;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+.close1 {
+    color: red;
+    float: right;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close1:hover,
+.close1:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*login Form*/
+
+      * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+
+.login {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -10rem 0 0 -10rem;
+  width: 20rem;
+  height: 20rem;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.login:hover > .login-header, .login.focused > .login-header {
+  width: 2rem;
+}
+.login:hover > .login-header > .text, .login.focused > .login-header > .text {
+  font-size: 1rem;
+  transform: rotate(-90deg);
+}
+.login.loading > .login-header {
+  width: 20rem;
+}
+.login.loading > .login-header > .text {
+  display: none;
+}
+.login.loading > .login-header > .loader {
+  display: block;
+}
+
+.login-header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: 20rem;
+  height: 20rem;
+  background: orange;
+  transition: width 0.5s ease-in-out;
+}
+.login-header > .text {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 5rem;
+  text-align: center;
+  line-height: 20rem;
+  color: #fff;
+  transition: all 0.5s ease-in-out;
+}
+.login-header > .loader {
+  display: none;
+  position: absolute;
+  left: 5rem;
+  top: 5rem;
+  width: 10rem;
+  height: 10rem;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  animation: loading 2s linear infinite;
+}
+.login-header > .loader:after {
+  content: "";
+  position: absolute;
+  left: 4.5rem;
+  top: -0.5rem;
+  width: 1rem;
+  height: 1rem;
+  background: #fff;
+  border-radius: 50%;
+  border-right: 2px solid orange;
+}
+.login-header > .loader:before {
+  content: "";
+  position: absolute;
+  left: 4rem;
+  top: -0.5rem;
+  width: 0;
+  height: 0;
+  border-right: 1rem solid #fff;
+  border-top: 0.5rem solid transparent;
+  border-bottom: 0.5rem solid transparent;
+}
+
+@keyframes loading {
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.login-form {
+  margin: 0 0 0 2rem;
+  padding: 0.5rem;
+}
+
+.login-input {
+  display: block;
+  width: 100%;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  box-shadow: none;
+  border-color: #ccc;
+  border-width: 0 0 2px 0;
+}
+.login-input + .login-input {
+  margin: 10px 0 0;
+}
+.login-input:focus {
+  outline: none;
+  border-bottom-color: orange;
+}
+
+.login-btn {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  width: 5rem;
+  height: 5rem;
+  border: none;
+  background: orange;
+  border-radius: 50%;
+  font-size: 0;
+  border: 0.6rem solid transparent;
+  transition: all 0.3s ease-in-out;
+}
+.login-btn:after {
+  content: "";
+  position: absolute;
+  left: 1rem;
+  top: 0.8rem;
+  width: 0;
+  height: 0;
+  border-left: 2.4rem solid #fff;
+  border-top: 1.2rem solid transparent;
+  border-bottom: 1.2rem solid transparent;
+  transition: border 0.3s ease-in-out 0s;
+}
+.login-btn:hover, .login-btn:focus, .login-btn:active {
+  background: #fff;
+  border-color: orange;
+  outline: none;
+}
+.login-btn:hover:after, .login-btn:focus:after, .login-btn:active:after {
+  border-left-color: orange;
+}
+
+
+/*register form*/
+#DOB{
+	width:40%;
+	height:30px;
+}
+#profile_upload{
+	width:40%;
+	height:30px;
+	margin-left:30%
+}
+label{
+	padding-left:10%;
+	letter-spacing:2px;
+	font-family:'Arima Madurai', cursive;
+}
+html .login-wrap {
+  position: relative;
+  margin: 0 auto;
+  background: #ecf0f1;
+  width:80%;
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px #333;
+  padding: 15px;
+}
+html .login-wrap h2 {
+  text-align: center;
+  font-weight: 200;
+  font-size: 2em;
+  margin-top: 10px;
+  color: #34495e;
+}
+
+html .login-wrap .form input[type="text"],
+html .login-wrap .form input[type="email"],
+html .login-wrap .form input[type="url"],
+html .login-wrap .form input[type="password"],
+html .login-wrap .form #submit {
+  width: 80%;
+  margin-left: 10%;
+  margin-bottom: 25px;
+  height: 40px;
+  border-radius: 5px;
+  outline: 0;
+  -moz-outline-style: none;
+}
+html .login-wrap .form input[type="text"],
+html .login-wrap .form input[type="email"],
+html .login-wrap .form input[type="url"],
+html .login-wrap .form input[type="password"] {
+  border: 1px solid #bbb;
+  padding: 0 0 0 5px;
+  font-size: 10px;
+}
+html .login-wrap .form input[type="text"]:focus,
+html .login-wrap .form input[type="email"]:focus,
+html .login-wrap .form input[type="url"],:focus,
+html .login-wrap .form input[type="password"]:focus {
+  border: 1px solid #3498db;
+}
+html .login-wrap .form a {
+  text-align: center;
+  font-size: 10px;
+  color: #3498db;
+}
+html .login-wrap .form a p {
+  padding-bottom: 10px;
+}
+html .login-wrap .form #submit {
+  background: #e74c3c;
+  border: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 200;
+  cursor: pointer;
+  transition: box-shadow .4s ease;
+}
+html .login-wrap .form #submit:hover {
+  box-shadow: 1px 1px 5px #555;
+}
+html .login-wrap .form #submit:active {
+  box-shadow: 1px 1px 7px #222;
+}
+html .login-wrap:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: -webkit-linear-gradient(left, #27ae60 0%, #27ae60 20%, #8e44ad 20%, #8e44ad 40%, #3498db 40%, #3498db 60%, #e74c3c 60%, #e74c3c 80%, #f1c40f 80%, #f1c40f 100%);
+  background: -moz-linear-gradient(left, #27ae60 0%, #27ae60 20%, #8e44ad 20%, #8e44ad 40%, #3498db 40%, #3498db 60%, #e74c3c 60%, #e74c3c 80%, #f1c40f 80%, #f1c40f 100%);
+  height: 5px;
+  border-radius: 5px 5px 0 0;
+}
